@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI API Hub - Premium LLM APIs at 40% Lower Costs</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Hero Section - Dark with Grid & Particles -->
+    <section class="hero">
+        <!-- Animated particles -->
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+
+        <div class="container">
+            <div class="hero-content">
+                <h1>Access Premium LLM APIs at <span class="highlight">40% Lower Cost</span></h1>
+                <p class="subheadline">Get the same GPT-4, Claude, and Gemini APIs you trust—with enterprise bulk pricing passed directly to you</p>
+                <div class="hero-cta">
+                    <button class="btn-primary" onclick="scrollToSection('pricing')">View Pricing</button>
+                    <button class="btn-secondary" onclick="scrollToSection('how-it-works')">How It Works</button>
+                </div>
+                <div class="trust-indicators">
+                    <span>🔒 256-bit Encryption</span>
+                    <span>⚡ 99.9% Uptime</span>
+                    <span>👥 Trusted by 500+ Developers</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Comparison Section - Dark Variant -->
+    <section id="pricing" class="pricing-comparison">
+        <div class="container">
+            <h2>Compare & Save on Every API Call</h2>
+            <p class="section-subtitle">Same models. Same quality. Significantly lower prices.</p>
+
+            <div class="comparison-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Model</th>
+                            <th>Official Price</th>
+                            <th>Our Price</th>
+                            <th>Your Savings</th>
+                        </tr>
+                    </thead>
+				   <tbody>
+					<tr>
+						<td>
+							<div class="model-name">
+								<img src="icons/openai-icon.svg" class="model-icon" alt="GPT-4">
+								<strong>GPT-4 Turbo</strong>
+							</div>
+						</td>
+						<td>$10.00 / 1M tokens</td>
+						<td class="our-price">$5.99 / 1M tokens</td>
+						<td><span class="savings">40% OFF</span></td>
+					</tr>
+					<tr>
+						<td>
+							<div class="model-name">
+								<img src="icons/claude-icon.svg" class="model-icon" alt="Claude">
+								<strong>Claude 3.5 Sonnet</strong>
+							</div>
+						</td>
+						<td>$3.00 / 1M tokens</td>
+						<td class="our-price">$1.79 / 1M tokens</td>
+						<td><span class="savings">40% OFF</span></td>
+					</tr>
+					<tr>
+						<td>
+							<div class="model-name">
+								<img src="icons/gemini-icon.svg" class="model-icon" alt="Gemini">
+								<strong>Gemini 1.5 Pro</strong>
+							</div>
+						</td>
+						<td>$7.00 / 1M tokens</td>
+						<td class="our-price">$4.20 / 1M tokens</td>
+						<td><span class="savings">40% OFF</span></td>
+					</tr>
+					<tr>
+						<td>
+							<div class="model-name">
+								<img src="icons/openai-icon.svg" class="model-icon" alt="GPT-3.5">
+								<strong>GPT-3.5 Turbo</strong>
+							</div>
+						</td>
+						<td>$0.50 / 1M tokens</td>
+						<td class="our-price">$0.30 / 1M tokens</td>
+						<td><span class="savings">40% OFF</span></td>
+					</tr>
+				</tbody>
+
+
+
+                </table>
+            </div>
+
+            <!-- Pricing Note -->
+            <div class="pricing-note">
+                <strong>💡 Note:</strong> Prices shown are average combined rates. Actual costs vary: Input tokens are typically 40% less expensive than output tokens. Use our calculator below for precise estimates based on your usage pattern.
+            </div>
+
+            <!-- Trust Badges Mini -->
+          
+
+            <!-- Calculator Widget -->
+            <div class="calculator-widget">
+                <h3>💰 Calculate Your Monthly Savings</h3>
+                <div class="calculator-content">
+                    <div class="calculator-input">
+                        <label for="tokenUsage">Estimated Monthly Token Usage (Millions):</label>
+                        <input type="number" id="tokenUsage" value="10" min="1" max="1000" oninput="calculateSavings()">
+                        <label for="modelSelect">Select Model:</label>
+                        <select id="modelSelect" onchange="calculateSavings()">
+                            <option value="gpt4">GPT-4 Turbo</option>
+                            <option value="claude">Claude 3.5 Sonnet</option>
+                            <option value="gemini">Gemini 1.5 Pro</option>
+                            <option value="gpt35">GPT-3.5 Turbo</option>
+                        </select>
+                    </div>
+                    <div class="calculator-results">
+                        <div class="result-item">
+                            <span>Official Cost:</span>
+                            <span id="officialCost" class="cost-value">$100.00</span>
+                        </div>
+                        <div class="result-item">
+                            <span>Our Cost:</span>
+                            <span id="ourCost" class="cost-value">$59.90</span>
+                        </div>
+                        <div class="result-item savings-highlight">
+                            <span>You Save:</span>
+                            <span id="savings" class="savings-value">$40.10/month</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works - Darker -->
+    <section id="how-it-works" class="how-it-works">
+        <div class="container">
+            <h2>Get Started in 3 Simple Steps</h2>
+            <div class="steps-grid">
+                <div class="step-card">
+                    <div class="step-number">1</div>
+                    <h3>Sign Up Free</h3>
+                    <p>Create your account in 30 seconds.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">2</div>
+                    <h3>Get Your API Key</h3>
+                    <p>Receive your unique API key instantly. Compatible with OpenAI SDK format.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">3</div>
+                    <h3>Start Building</h3>
+                    <p>Replace your existing API endpoint and start saving immediately. No code changes needed.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us - Subtle Variant -->
+    <section class="why-choose">
+        <div class="container">
+            <h2>Why Developers Trust AI API Hub</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🚀</div>
+                    <h3>Multiple Models, One API</h3>
+                    <p>Access GPT-4, Claude, Gemini, and more with a single API key. Switch models with one parameter.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3>99.9% Uptime SLA</h3>
+                    <p>Enterprise-grade infrastructure with automatic failover. Average response time under 800ms.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔒</div>
+                    <h3>Enterprise Security</h3>
+                    <p>Your data is encrypted in transit and at rest. We never store your prompts or responses.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📊</div>
+                    <h3>Real-Time Dashboard</h3>
+                    <p>Monitor usage, costs, and performance metrics. Set spending limits and get instant alerts.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">💳</div>
+                    <h3>Transparent Billing</h3>
+                    <p>Pay only for what you use. No hidden fees, no minimum commitments. Cancel anytime.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🛠️</div>
+                    <h3>24/7 Developer Support</h3>
+                    <p>Technical support via Discord, email, and documentation. Average response time: 2 hours.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Transparency Section - Darker -->
+    <section class="transparency">
+        <div class="container">
+            <h2>How We Offer Lower Prices (And Why It's Legitimate)</h2>
+            <div class="transparency-content">
+                <div class="transparency-text">
+                    <p>We understand skepticism around "too good to be true" pricing. Here's exactly how our business model works:</p>
+                    <div class="transparency-points">
+                        <div class="point">
+                            <strong>🏢 Enterprise Bulk Agreements</strong>
+                            <p>We purchase API credits in bulk directly from OpenAI, Anthropic, and Google at enterprise volume discounts (similar to AWS resellers).</p>
+                        </div>
+                        <div class="point">
+                            <strong>💰 Passing Savings to You</strong>
+                            <p>Instead of keeping all the margin, we pass 70% of our bulk discount savings directly to developers and small businesses.</p>
+                        </div>
+                        <div class="point">
+                            <strong>⚙️ Efficient Operations</strong>
+                            <p>Our lean infrastructure and automated systems reduce overhead, allowing us to maintain competitive pricing.</p>
+                        </div>
+                        <div class="point">
+                            <strong>🔄 Direct Passthrough</strong>
+                            <p>We act as a passthrough proxy. Your requests go directly to official APIs—same quality, same models, same reliability.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="trust-badges">
+                    <h3>Our Credentials</h3>
+                    <div class="badges">
+                        <div class="badge">🔒 256-bit SSL Encryption</div>
+                        <div class="badge">✅ GDPR Compliant</div>
+                        <div class="badge">🚀 99.9% Uptime (30 days)</div>
+                        <div class="badge">💳 Payments via Stripe</div>
+                    </div>
+                    <div class="metrics">
+                        <div class="metric">
+                            <div class="metric-value">10M+</div>
+                            <div class="metric-label">API Calls Processed</div>
+                        </div>
+                        <div class="metric">
+                            <div class="metric-value">500+</div>
+                            <div class="metric-label">Active Developers</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials - Subtle Variant -->
+    <section class="testimonials">
+        <div class="container">
+            <h2>What Developers Are Saying</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p class="quote">"Switched from OpenAI direct and saved $3,200/month. Same API format, zero integration hassle. Wish I found this sooner!"</p>
+                    <div class="author">
+                        <strong>Sarah Chen</strong>
+                        <span>CTO, TechStartup Inc.</span>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p class="quote">"The unified API for multiple models is a game-changer. I can test GPT-4 vs Claude without managing multiple keys."</p>
+                    <div class="author">
+                        <strong>Michael Rodriguez</strong>
+                        <span>Senior Developer, AI Solutions</span>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p class="quote">"Transparent pricing and excellent support. The dashboard makes it easy to monitor costs. Highly recommend for any AI project."</p>
+                    <div class="author">
+                        <strong>Emily Watson</strong>
+                        <span>Founder, ChatBot Pro</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Code Example - Dark -->
+    <section class="code-example">
+        <div class="container">
+            <h2>Drop-In Replacement for OpenAI SDK</h2>
+            <p class="section-subtitle">Change 2 lines of code, keep everything else the same</p>
+            <div class="code-container">
+                <div class="code-tabs">
+                    <button class="code-tab active" onclick="showCode('python')">Python</button>
+                    <button class="code-tab" onclick="showCode('javascript')">JavaScript</button>
+                    <button class="code-tab" onclick="showCode('curl')">cURL</button>
+                </div>
+                <div class="code-content">
+                    <pre id="python-code" class="code-block active"><code>from openai import OpenAI
+
+# Just change these 2 lines
+client = OpenAI(
+    api_key="your_ai_api_hub_key",
+    base_url="https://api.aiapihub.com/v1"
+)
+
+# Everything else stays the same
+response = client.chat.completions.create(
+    model="gpt-4-turbo",
+    messages=[{"role": "user", "content": "Hello!"}]
+)
+print(response.choices[0].message.content)</code></pre>
+
+                    <pre id="javascript-code" class="code-block"><code>import OpenAI from "openai";
+
+// Just change these 2 lines
+const openai = new OpenAI({
+    apiKey: "your_ai_api_hub_key",
+    baseURL: "https://api.aiapihub.com/v1"
+});
+
+// Everything else stays the same
+const completion = await openai.chat.completions.create({
+    model: "gpt-4-turbo",
+    messages: [{ role: "user", content: "Hello!" }]
+});
+console.log(completion.choices[0].message.content);</code></pre>
+
+                    <pre id="curl-code" class="code-block"><code>curl https://api.aiapihub.com/v1/chat/completions \
+  -H "Content-Type: application/json" \
+  -H "Authorization: Bearer your_ai_api_hub_key" \
+  -d '{
+    "model": "gpt-4-turbo",
+    "messages": [{"role": "user", "content": "Hello!"}]
+  }'</code></pre>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Supported Models - Subtle Variant -->
+    <section class="supported-models">
+        <div class="container">
+            <h2>All Major LLM Models in One Place</h2>
+            <div class="models-grid">
+                <div class="model-card">
+                    <h3>OpenAI</h3>
+                    <ul>
+                        <li>GPT-4 Turbo</li>
+                        <li>GPT-4</li>
+                        <li>GPT-3.5 Turbo</li>
+                    </ul>
+                </div>
+                <div class="model-card">
+                    <h3>Anthropic</h3>
+                    <ul>
+                        <li>Claude 3.5 Sonnet</li>
+                        <li>Claude 3 Opus</li>
+                        <li>Claude 3 Haiku</li>
+                    </ul>
+                </div>
+                <div class="model-card">
+                    <h3>Google</h3>
+                    <ul>
+                        <li>Gemini 1.5 Pro</li>
+                        <li>Gemini 1.5 Flash</li>
+                        <li>Gemini 1.0 Pro</li>
+                    </ul>
+                </div>
+                <div class="model-card">
+                    <h3>More Coming</h3>
+                    <ul>
+                        <li>Llama 3.1</li>
+                        <li>Mistral Large</li>
+                        <li>Request a model</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ - Darker -->
+<section class="faq">
+    <div class="container">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-grid">
+            <div class="faq-item">
+                <h3>How can you offer prices 40% lower than official APIs? <span class="faq-icon">+</span></h3>
+                <div class="faq-answer">
+                    <p>We purchase API credits in bulk at enterprise volume discounts directly from OpenAI, Anthropic, and Google. Similar to how AWS resellers work, we pass most of these savings to our customers while maintaining a sustainable margin.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <h3>Is this service legitimate and reliable? <span class="faq-icon">+</span></h3>
+                <div class="faq-answer">
+                    <p>Yes. We're a registered business with enterprise security standards. We've processed over 10 million API calls for 500+ developers with 99.9% uptime. Your requests are routed directly to official APIs—we're simply a cost-effective proxy.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <h3>Will my API calls have the same quality and speed? <span class="faq-icon">+</span></h3>
+                <div class="faq-answer">
+                    <p>Absolutely. We route your requests directly to official APIs with minimal latency overhead (average 50-100ms). You get identical responses, same model versions, and similar speed to calling OpenAI or Anthropic directly.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <h3>How easy is it to switch from OpenAI/Anthropic? <span class="faq-icon">+</span></h3>
+                <div class="faq-answer">
+                    <p>Extremely easy. Our API is OpenAI SDK compatible. You only need to change your API key and base URL (2 lines of code). All your existing code, parameters, and features work identically.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <h3>What happens to my data? Do you store prompts? <span class="faq-icon">+</span></h3>
+                <div class="faq-answer">
+                    <p>We do not store your prompts or responses. All data is encrypted in transit. We only log metadata (timestamps, token counts) for billing purposes. We're GDPR compliant.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <h3>What if you go out of business? <span class="faq-icon">+</span></h3>
+                <div class="faq-answer">
+                    <p>You can switch back to official APIs in minutes by reverting your API key and base URL. No vendor lock-in. We also provide 30-day notice before any service changes and will assist with migration if needed.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <h3>How does billing work? Are there hidden fees? <span class="faq-icon">+</span></h3>
+                <div class="faq-answer">
+                    <p>Pay-as-you-go pricing with no hidden fees, no monthly minimums, and no long-term contracts. You're billed monthly for actual token usage. Set spending limits to control costs. Cancel anytime.</p>
+                </div>
+            </div>
+           
+        </div>
+    </div>
+</section>
+
+	
+    <!-- Final CTA - Gradient Dark -->
+    <section class="final-cta">
+        <div class="container">
+            <h2>Start Saving on LLM APIs Today</h2>
+            <p>Join 500+ developers reducing their AI costs by 40%</p>
+            <button class="btn-primary-large" onclick="scrollToTop()">Get Started</button>
+            <p class="cta-subtext">No credit card required • 5-minute setup • Cancel anytime</p>
+        </div>
+    </section>
+
+    <!-- Sticky CTA Button -->
+    <div id="sticky-cta" class="sticky-cta">
+        <button class="btn-sticky" onclick="scrollToTop()">Get Started</button>
+    </div>
+
+    <!-- Footer - Darkest -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>AI API Hub</h4>
+                    <p>Enterprise LLM APIs at developer-friendly prices</p>
+                    <p class="company-info">AI API Hub Inc. • San Francisco, CA</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Product</h4>
+                    <ul>
+                        <li><a href="#pricing">Pricing</a></li>
+                        <li><a href="#documentation">Documentation</a></li>
+                        <li><a href="#status">Status Page</a></li>
+                        <li><a href="#models">Supported Models</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="#security">Security</a></li>
+                        <li><a href="#compliance">Compliance</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="#privacy">Privacy Policy</a></li>
+                        <li><a href="#terms">Terms of Service</a></li>
+                        <li><a href="#sla">SLA</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <p>📧 support@aiapihub.com</p>
+                    <p>💬 Discord Community</p>
+                    <p>🐦 @aiapihub</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 AI API Hub Inc. All rights reserved.</p>
+                <p>🔒 Payments secured by Stripe</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
